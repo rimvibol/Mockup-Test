@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: List Transaction
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /list-transaction:
+    post:
+      summary: List Transaction
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    data:
+                      - id: 573ee375-a202-4fc6-9b28-060c1a7e37db
+                        type: transfer
+                        attributes:
+                          created_at: '2020-03-18T08:36:33Z'
+                          updated_at: '2020-03-18T09:36:51Z'
+                          destination_account_number: bongloy_testing-P01-1234560
+                          destination_account_holder_name: Tang Dara
+                          currency: USD
+                          status: successful
+                          metadata:
+                            foobar: foobar
+                            reference_number: cde456
+                            other_field: foobar
+                          error_code: null
+                          error_message: null
+                          amount: 10000
+                    links:
+                      prev: 'https://agent-network-sandbox.bongloy.com/v1/transfers?filter%5Bfrom_date%5D=2020-01-01T00%3A00%3A00Z&filter%5Bstatus%5D=successful&filter%5Bto_date%5D=2020-03-18T11%3A00%3A00Z&page%5Bbefore%5D=573ee375-a202-4fc6-9b28-060c1a7e37db'
+                      next: null
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    errors:
+                      - title: 'must be one of: pending, pending_confirmation, successful, failed'
+                        source:
+                          pointer: /filter/status
+      operationId: post-list-transaction
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1:
+                value:
+                  status: successful
+                  from_date: '2020-01-01T00%3A00%3A00Z'
+                  to_date: '2020-03-18T11%3A00%3A00Z'
+              example-2:
+                value:
+                  status: failed
+                  from_date: '2020-01-01T00%3A00%3A00Z'
+                  to_date: '2020-03-18T11%3A00%3A00Z'
+components:
+  schemas: {}
