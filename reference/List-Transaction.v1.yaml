@@ -59,6 +59,7 @@ paths:
                   status: failed
                   from_date: '2020-01-01T00%3A00%3A00Z'
                   to_date: '2020-03-18T11%3A00%3A00Z'
+              example-3: {}
           application/xml:
             schema:
               type: object
