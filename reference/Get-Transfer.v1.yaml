@@ -49,5 +49,19 @@ paths:
                 value:
                   transfer_id: 936f122d-3a66-4460-b0f4-a8f538d00777
     parameters: []
+  /list-all-transaction:
+    post:
+      summary: List All transaction
+      tags: []
+      responses: {}
+      operationId: post-list-all-transaction
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1: {}
 components:
   schemas: {}
