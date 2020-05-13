@@ -5,7 +5,7 @@ info:
 servers:
   - url: 'http://localhost:3000'
 paths:
-  /list-transaction:
+  /list-transactions:
     post:
       summary: List Transaction
       tags: []
@@ -41,20 +41,6 @@ paths:
                       prev: 'https://agent-network-sandbox.bongloy.com/v1/transfers?filter%5Bfrom_date%5D=2020-01-01T00%3A00%3A00Z&filter%5Bstatus%5D=successful&filter%5Bto_date%5D=2020-03-18T11%3A00%3A00Z&page%5Bbefore%5D=573ee375-a202-4fc6-9b28-060c1a7e37db'
                       next: null
                 example-2: {}
-        '400':
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-              examples:
-                example-1:
-                  value:
-                    errors:
-                      - title: 'must be one of: pending, pending_confirmation, successful, failed'
-                        source:
-                          pointer: /filter/status
       operationId: post-list-transaction
       requestBody:
         content:
@@ -83,5 +69,6 @@ paths:
                   status: successful
                   from_date: '2020-01-01T00%3A00%3A00Z'
                   to_date: '2020-03-18T11%3A00%3A00Z'
+    parameters: []
 components:
   schemas: {}
