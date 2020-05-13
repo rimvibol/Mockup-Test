@@ -40,6 +40,7 @@ paths:
                     links:
                       prev: 'https://agent-network-sandbox.bongloy.com/v1/transfers?filter%5Bfrom_date%5D=2020-01-01T00%3A00%3A00Z&filter%5Bstatus%5D=successful&filter%5Bto_date%5D=2020-03-18T11%3A00%3A00Z&page%5Bbefore%5D=573ee375-a202-4fc6-9b28-060c1a7e37db'
                       next: null
+                example-2: {}
         '400':
           description: Bad Request
           content:
@@ -70,6 +71,16 @@ paths:
               example-2:
                 value:
                   status: failed
+                  from_date: '2020-01-01T00%3A00%3A00Z'
+                  to_date: '2020-03-18T11%3A00%3A00Z'
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1:
+                value:
+                  status: successful
                   from_date: '2020-01-01T00%3A00%3A00Z'
                   to_date: '2020-03-18T11%3A00%3A00Z'
 components:
