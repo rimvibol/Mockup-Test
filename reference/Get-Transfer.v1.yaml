@@ -58,15 +58,7 @@ paths:
                         error_message: Destination account not found
                         amount: 10000
       operationId: get-get-transfer
-      parameters:
-        - schema:
-            type: string
-          in: header
-          name: Authorization
-        - schema:
-            type: string
-          in: header
-          name: Content-Type
+      parameters: []
       requestBody:
         content:
           application/json:
@@ -78,6 +70,6 @@ paths:
             examples:
               example-1:
                 value:
-                  transfer_id: 4748f53f-cde5-45dc-92e1-1a7b089921eb
+                  transfer_id: 936f122d-3a66-4460-b0f4-a8f538d00777
 components:
   schemas: {}
