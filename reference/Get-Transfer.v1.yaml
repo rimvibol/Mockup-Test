@@ -67,5 +67,17 @@ paths:
             type: string
           in: header
           name: Content-Type
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                transfer_id:
+                  type: string
+            examples:
+              example-1:
+                value:
+                  transfer_id: 4748f53f-cde5-45dc-92e1-1a7b089921eb
 components:
   schemas: {}
