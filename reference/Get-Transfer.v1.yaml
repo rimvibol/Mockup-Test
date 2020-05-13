@@ -64,9 +64,6 @@ paths:
           application/json:
             schema:
               type: object
-              properties:
-                transfer_id:
-                  type: string
             examples:
               example-1:
                 value:
