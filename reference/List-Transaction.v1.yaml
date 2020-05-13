@@ -27,7 +27,7 @@ paths:
                           created_at: '2020-03-18T08:36:33Z'
                           updated_at: '2020-03-18T09:36:51Z'
                           destination_account_number: bongloy_testing-P01-1234560
-                          destination_account_holder_name: Tang Dara
+                          destination_account_holder_name: Tang Dara1
                           currency: USD
                           status: successful
                           metadata:
